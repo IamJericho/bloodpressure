@@ -1,6 +1,8 @@
 <template>
-  <div class="results-body">
-    <div id="results" class="col"></div>
+  <div class="results-body mt-5">
+    <div id="results" class="col">
+      <p>results go here</p>
+    </div>
   </div>
 </template>
 
