@@ -4,7 +4,12 @@
     <div class="row">
       <div class="col col-sm-6 offset-sm-3">
         <ul class="list-unstyled">
-          <li>results</li>
+          <li>
+            results
+            <span>
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </span>
+          </li>
         </ul>
       </div>
     </div>
@@ -21,6 +26,4 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>
+<style scoped></style>
