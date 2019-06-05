@@ -8,7 +8,14 @@
             <strong>Systolic</strong>
             <br />mm Hg (upper #)
           </label>
-          <input id="systolic" type="number" class="form-control required" />
+          <input
+            id="systolic"
+            type="number"
+            class="form-control required"
+            min="60"
+            max="500"
+            v-model="sys"
+          />
         </div>
       </div>
       <div class="row mt-4">
@@ -17,7 +24,14 @@
             <strong>Diastolic</strong>
             <br />mm Hg (lower #)
           </label>
-          <input id="diastolic" type="number" class="form-control" />
+          <input
+            id="diastolic"
+            type="number"
+            class="form-control required"
+            min="60"
+            max="500"
+            v-model="dia"
+          />
         </div>
       </div>
       <div class="row">
@@ -39,11 +53,13 @@
         </div>
       </div>
     </form>
-    <div class="row">
-      <div class="results-body mt-5 col">
+    <div v-if="dia > 0 || sys > 0" class="row">
+      <div v-if="dia > 80 && sys > 60" class="results-body mt-5 col">
         <div id="results" class="bg-color">
           <div>
             <p class="text-center">Results</p>
+            <p>{{ sys }}</p>
+            <p>{{ dia }}</p>
           </div>
         </div>
       </div>
@@ -54,6 +70,12 @@
 <script>
 export default {
   name: "Intro",
+  data: function() {
+    return {
+      dia: "",
+      sys: ""
+    };
+  },
   props: {
     msg: String
   },
