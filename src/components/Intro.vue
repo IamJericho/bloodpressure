@@ -37,11 +37,12 @@
       <div class="row">
         <div id="go-btn" class="col">
           <button
-            id="submit"
-            type="submit"
+            @click="calculatePressure"
+            id="calculate"
+            type="button"
             class="btn btn-success btn-lg mt-4 mr-4"
           >
-            Submit
+            Calculate
           </button>
           <button
             id="reset"
@@ -63,6 +64,7 @@
           </div>
         </div>
       </div>
+      <p v-else>Check yo stuff again</p>
     </div>
   </div>
 </template>
@@ -75,6 +77,12 @@ export default {
       dia: "",
       sys: ""
     };
+  },
+  methods: {
+    calculatePressure: function() {
+      this.dia = "";
+      this.sys = "";
+    }
   },
   props: {
     msg: String
