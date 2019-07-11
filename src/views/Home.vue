@@ -2,7 +2,9 @@
   <div class="home">
     <!--<img alt="Vue logo" src="../assets/logo.png" />-->
     <Intro msg="Blood Pressure Calculator" />
+    <!-- begin global compontent -->
     <get-pressure></get-pressure>
+    <!-- end global compontent -->
   </div>
 </template>
 
