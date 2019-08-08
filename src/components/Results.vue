@@ -1,8 +1,6 @@
 <template>
-  <div class="col-sm-6 col-md-4 col-lg-3">
-    <div class="results">
-      <slot></slot>
-    </div>
+  <div class="results float-left mx-3">
+    <slot></slot>
   </div>
 </template>
 

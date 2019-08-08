@@ -1,6 +1,12 @@
 
 Todo:
+  alt + enter creates checklist
+  alt + d checks the mark
+  ☐ @critical @high @low @today 
   ☐ mockapi
   ☐ Wordpress CMS
-  ☐ Make a global compontent
-  ☐ pass data from parent to child
+  ✔ Make a global compontent @done(19-07-11 11:33)
+  ✔ pass data from parent to child @done(19-07-11 11:33)
+  ☐ push object instead of numbers to array for progress bar @today 
+  ☐ clear out value after hitting calculate @high 
+  ☐ store to local storage @critical 

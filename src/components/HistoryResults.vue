@@ -1,10 +1,12 @@
 <template>
   <div class="row">
-    <app-result
-      v-for="(result, index) in results"
-      @click.native="deleteResult(index)"
-      >{{ result }}</app-result
-    >
+    <div class="col-sm-6">
+      <app-result
+        v-for="(result, index) in results"
+        @click.native="deleteResult(index)"
+        >{{ result.join(", ") }}</app-result
+      >
+    </div>
   </div>
 </template>
 

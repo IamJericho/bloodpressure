@@ -21,8 +21,8 @@ import Header from "@/components/Header.vue";
 export default {
   data: function() {
     return {
-      results: [""],
-      maxResults: 100
+      results: [],
+      maxResults: 10
     };
   },
   methods: {
@@ -32,10 +32,18 @@ export default {
           "You have reached the maxium amount of results that can be saved, please delete some results before proceeding."
         );
       }
-      this.results.push(obj.dia, obj.sys);
+      if (obj.dia.length !== 0 && obj.sys.length !== 0) {
+        let tempList = [Number(obj.dia), Number(obj.sys)];
+        this.results.push(tempList);
+        console.log(tempList);
+      } else {
+        console.log("no value");
+      }
+      console.log(obj.dia.length);
+      console.log(obj.sys.length);
     },
     deleteResult(index) {
-      this.results.splice(index, 2);
+      this.results.splice(index, 1);
     }
   },
   components: {
